@@ -128,7 +128,7 @@ function addFuel(id){
     console.log(newFuelObjectUpdate);
 
             $.ajax({
-                url : api + "flight/" + id,
+                url : api + id,
                 type : "put",
                 data : newFuelObjectUpdate,
                 contentType : "application/json",
@@ -148,8 +148,8 @@ function goFly(id){
 
 
     var fuelObject = {
-                        id : id,
-                        currentFuel : (currentFuel - 2000)
+                        id : id
+
                         };
 
     console.log(fuelObject);
@@ -157,7 +157,7 @@ function goFly(id){
     console.log(newFuelObjectUpdate);
 
             $.ajax({
-                url : api + id,
+                url : api + "flight/" + id,
                 type : "put",
                 data : newFuelObjectUpdate,
                 contentType : "application/json",
