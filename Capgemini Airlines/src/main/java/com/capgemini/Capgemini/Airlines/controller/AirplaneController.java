@@ -35,9 +35,7 @@ public class AirplaneController {
     // Add fuel
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
     public void addFuel(@PathVariable long id, @RequestBody Airplane airplaneToFuel) {
-        // ophalen airplane met id
-//        en dan saven
-
+        // ophalen airplane met id en dan saven
         Airplane p = this.airplaneRepository.findOne(id);
         p.setCurrentFuel(airplaneToFuel.getCurrentFuel());
         airplaneRepository.save(p);

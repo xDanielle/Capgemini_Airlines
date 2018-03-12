@@ -107,6 +107,7 @@ $("#deleteThisPlane").html("Are you sure you want to delete plane #" + id + "?")
                             $("#planeTable").html("");
 
                             getData();
+
                             }
 
                 });
